@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edufix Grade 10F</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f0f2f5; margin: 0; padding: 0; }
+  .center { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+  button { padding: 10px 20px; margin: 10px; font-size: 16px; cursor: pointer; }
+  .hidden { display: none; }
+  .dashboard { padding: 20px; }
+  h2 { color: #333; }
+  ul { list-style: none; padding: 0; }
+  li { background: #fff; margin: 5px 0; padding: 10px; border-radius: 5px; }
+</style>
+</head>
+<body>
+
+<div id="roleSelection" class="center">
+  <h2>Welcome to Edufix Grade 10F</h2>
+  <p>Select your role:</p>
+  <button onclick="showDashboard('student')">Student</button>
+  <button onclick="showDashboard('teacher')">Teacher</button>
+</div>
+
+<div id="studentDashboard" class="hidden dashboard">
+  <h2>Student Dashboard</h2>
+  <p>Subjects:</p>
+  <ul>
+    <li>Maths - Assignments & Materials</li>
+    <li>English - Assignments & Materials</li>
+    <li>Science - Assignments & Materials</li>
+  </ul>
+  <p>Upcoming Tests:</p>
+  <ul>
+    <li>Math Test - 10 Dec</li>
+    <li>English Test - 12 Dec</li>
+  </ul>
+  <button onclick="goBack()">Back</button>
+</div>
+
+<div id="teacherDashboard" class="hidden dashboard">
+  <h2>Teacher Dashboard</h2>
